@@ -1,14 +1,14 @@
 package db;
 
-public class pilots {
+public class Pilots {
 
     private int id;
     private String name;
     private String last_name;
-    private String rank;
+    private Rank rank;
     private String pilot_code;
 
-    public pilots(int id, String name, String last_name, String rank, String pilot_code) {
+    public Pilots(int id, String name, String last_name, Rank rank, String pilot_code) {
         this.id = id;
         this.name = name;
         this.last_name = last_name;
@@ -44,7 +44,7 @@ public class pilots {
         return rank;
     }
 
-    public void setRank(String rank) {
+    public void setRank(Rank rank) {
         this.rank = rank;
     }
 
@@ -58,11 +58,11 @@ public class pilots {
 
     @Override
     public String toString() {
-        return "pilots{" +
+        return "Pilots{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", last_name='" + last_name + '\'' +
-                ", rank='" + rank + '\'' +
+                ", rank=" + rank +
                 ", pilot_code='" + pilot_code + '\'' +
                 '}';
     }

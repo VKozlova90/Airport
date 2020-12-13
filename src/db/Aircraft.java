@@ -1,6 +1,6 @@
 package db;
 
-public class aircraft {
+public class Aircraft {
 
     private int id;
     private String brand;
@@ -8,7 +8,7 @@ public class aircraft {
     private int passenger_capacity;
     private int tail_number;
 
-    public aircraft(int id, String brand, String model, int passenger_capacity, int tail_number) {
+    public Aircraft(int id, String brand, String model, int passenger_capacity, int tail_number) {
         this.id = id;
         this.brand = brand;
         this.model = model;

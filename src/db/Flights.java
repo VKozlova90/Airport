@@ -3,7 +3,7 @@ package db;
 import java.sql.Time;
 import java.sql.Date;
 
-public class flights {
+public class Flights {
 
     private int id;
     private int aircrat;
@@ -12,7 +12,7 @@ public class flights {
     private Time time;
     private int flight_number;
 
-    public flights(int id, int aircrat, int pilot, Date data, Time time, int flight_number) {
+    public Flights(int id, int aircrat, int pilot, Date data, Time time, int flight_number) {
         this.id = id;
         this.aircrat = aircrat;
         this.pilot = pilot;

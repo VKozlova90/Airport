@@ -8,8 +8,8 @@ public class Flights {
     private int id;
     private int aircrat;
     private int pilot;
-    private Date data;
-    private Time time;
+    private String data;
+    private String time;
     private int flight_number;
 
     public Flights(int id, int aircrat, int pilot, String data, String time, int flight_number) {
@@ -45,19 +45,19 @@ public class Flights {
         this.pilot = pilot;
     }
 
-    public Date getData() {
+    public String getData() {
         return data;
     }
 
-    public void setData(Date data) {
+    public void setData(String data) {
         this.data = data;
     }
 
-    public Time getTime() {
+    public String getTime() {
         return time;
     }
 
-    public void setTime(Time time) {
+    public void setTime(String time) {
         this.time = time;
     }
 
@@ -71,12 +71,12 @@ public class Flights {
 
     @Override
     public String toString() {
-        return "flights{" +
+        return "Flights{" +
                 "id=" + id +
                 ", aircrat=" + aircrat +
                 ", pilot=" + pilot +
-                ", data=" + data +
-                ", time=" + time +
+                ", data='" + data + '\'' +
+                ", time='" + time + '\'' +
                 ", flight_number=" + flight_number +
                 '}';
     }

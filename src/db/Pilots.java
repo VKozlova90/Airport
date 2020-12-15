@@ -40,7 +40,7 @@ public class Pilots {
         this.last_name = last_name;
     }
 
-    public String getRank() {
+    public Rank getRank() {
         return rank;
     }
 

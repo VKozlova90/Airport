@@ -1,7 +1,6 @@
 package db.sql;
 
 import db.Aircraft;
-import db.Pilots;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

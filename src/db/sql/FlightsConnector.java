@@ -1,6 +1,5 @@
 package db.sql;
 
-import db.Aircraft;
 import db.Flights;
 
 import java.sql.*;
@@ -21,8 +20,9 @@ public class FlightsConnector {
         try (PreparedStatement statement = connection.prepareStatement(ADD)){
             statement.setInt(1, flights.getAircrat());
             statement.setInt(2, flights.getPilot());
-            statement.setDate(3, flights.getData());
-            statement.setTime(4, flights.getTime());
+            statement.setString(3, flights.getData());
+            statement.setString(4, flights.getTime());
+            statement.setInt(5, flights.getFlight_number());
 
             int resFlights = statement.executeUpdate();
 
@@ -40,11 +40,6 @@ public class FlightsConnector {
 
             ResultSet result = statement.executeQuery();
             while (result.next()) {
-
-
-                private Date data;
-                private Time time;
-                private int flight_number;
 
                 int id = result.getInt("id");
                 int aircrat = result.getInt("aircrat");

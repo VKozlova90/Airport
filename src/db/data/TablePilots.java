@@ -1,5 +1,6 @@
 package db.data;
 
+import db.Flights;
 import db.Pilots;
 import db.Rank;
 import db.sql.PilotsConnector;
@@ -22,6 +23,15 @@ public class TablePilots {
 
     PilotsConnector connector = new PilotsConnector(connection);
     connector.add (pilots);
+    connector.add (pilots1);
+    connector.add (pilots2);
+    connector.add (pilots3);
+    connector.add (pilots4);
+
+        for (
+    Pilots a : connector.readAll()){
+        System.out.println(a);
+    }
 
 
 

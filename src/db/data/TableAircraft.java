@@ -20,4 +20,13 @@ public class TableAircraft {
 
     AiircraftConnector connector = new AiircraftConnector(connection);
     connection.add (aircraft);
+    connector.add (aircraft1);
+    connector.add (aircraft2);
+    connector.add (aircraft3);
+    connector.add (aircraft4);
+
+        for (Aircraft a : connector.readAll()){
+        System.out.println(a);
+    }
+
 }

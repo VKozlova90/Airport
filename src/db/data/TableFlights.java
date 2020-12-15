@@ -1,4 +1,5 @@
 package db.data;
+import db.Aircraft;
 import db.Flights;
 import db.sql.FlightsConnector;
 
@@ -20,6 +21,15 @@ public class TableFlights {
 
     FlightsConnector connector = new FlightsConnector(connection);
     connector.add (flights);
+    connector.add (flights1);
+    connector.add (flights2);
+    connector.add (flights3);
+    connector.add (flights4);
+
+        for (
+    Flights a : connector.readAll()){
+        System.out.println(a);
+    }
 
 
 }

@@ -1,6 +1,5 @@
 package db.data;
 
-import db.Flights;
 import db.Pilots;
 import db.Rank;
 import db.sql.PilotsConnector;

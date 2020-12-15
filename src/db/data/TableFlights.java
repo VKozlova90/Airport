@@ -26,9 +26,8 @@ public class TableFlights {
     connector.add (flights3);
     connector.add (flights4);
 
-        for (
-    Flights a : connector.readAll()){
-        System.out.println(a);
+        for (Flights f : connector.readAll()){
+        System.out.println(f);
     }
 
 

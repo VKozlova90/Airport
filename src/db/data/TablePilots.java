@@ -28,9 +28,8 @@ public class TablePilots {
     connector.add (pilots3);
     connector.add (pilots4);
 
-        for (
-    Pilots a : connector.readAll()){
-        System.out.println(a);
+        for (Pilots p : connector.readAll()){
+        System.out.println(p);
     }
 
 

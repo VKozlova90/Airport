@@ -19,7 +19,5 @@ public class DbConnector {
         }
     }
 
-    public static Connection getConnection() {
-        return connection;
-    }
+
 }

@@ -11,15 +11,15 @@ import java.util.List;
 
 public class PilotsConnector {
     private Connection connection;
+    private static final String ADD = "INSERT INTO pilots (name, last_name, rank, pilot_code) VALUES (?, ?, ?, ?)";
+    private  static final String REQUEST = "SELECT * FROM pilots";
 
     public PilotsConnector(Connection connection) {
         this.connection = connection;
     }
 
-    private static final String ADD = "INSERT INTO pilots (name, last_name, rank, pilot_code) VALUES (?, ?, ?, ?)";
-    private  static final String REQUEST = "SELECT * FROM pilots";
+    public void add (Pilots pilots){
 
-    public void add (Pilots pilots) {
         try (PreparedStatement statement = connection.prepareStatement(ADD)){
             statement.setString(1, pilots.getName());
             statement.setString(2, pilots.getLast_name());

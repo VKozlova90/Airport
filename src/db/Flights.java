@@ -12,7 +12,7 @@ public class Flights {
     private Time time;
     private int flight_number;
 
-    public Flights(int id, int aircrat, int pilot, Date data, Time time, int flight_number) {
+    public Flights(int id, int aircrat, int pilot, String data, String time, int flight_number) {
         this.id = id;
         this.aircrat = aircrat;
         this.pilot = pilot;

@@ -1,6 +1,6 @@
 package db.sql;
 
-import db.Pilots;
+import com.company.Pilots;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

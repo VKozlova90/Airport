@@ -1,4 +1,4 @@
-package db;
+package com.company;
 
 public class Pilots {
 

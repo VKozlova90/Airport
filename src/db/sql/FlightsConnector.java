@@ -1,6 +1,6 @@
 package db.sql;
 
-import db.Flights;
+import com.company.Flights;
 
 import java.sql.*;
 import java.util.ArrayList;

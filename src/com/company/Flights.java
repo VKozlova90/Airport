@@ -1,4 +1,4 @@
-package db;
+package com.company;
 
 import java.sql.Time;
 import java.sql.Date;

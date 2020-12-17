@@ -33,6 +33,4 @@ public class PilotsFileReader {
         return new ArrayList<>();
 
     }
-
-
 }

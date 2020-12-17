@@ -37,11 +37,5 @@ public class PilotsDbWriter {
             e.printStackTrace();
         }
 
-
-
-
-
     }
-
-
 }

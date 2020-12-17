@@ -1,6 +1,6 @@
 package db.sql;
 
-import com.company.Aircraft;
+import com.company.entity.Aircraft;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

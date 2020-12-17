@@ -9,10 +9,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PilotsReader {
+public class PilotsFileReader {
     private  final  String filepath;
 
-    public PilotsReader(String filepath) {
+    public PilotsFileReader(String filepath) {
         this.filepath = filepath;
     }
 

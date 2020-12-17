@@ -1,33 +1,30 @@
 package com.company;
 
 import com.company.entity.Pilots;
-import com.company.io.PilotsReader;
+import com.company.io.PilotsDbReader;
+import com.company.io.PilotsFileReader;
+import com.company.io.PilotsDbWriter;
+import java.util.List;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import static com.company.io.FilePathConstants.*;
 
 public class Main {
 
-    private static Connection connection;
-
-    private static final String DB_URL = "jdbc:mysql://127.0.0.1:3306/airport?useUnicode=true&serverTimezone=UTC";
-    private static final String USER = "root";
-    private static final String PASS = "Core2duo166";
-
-
     public static void main(String[] args) {
-        Connection connection = null;
-        try {
-            connection = DriverManager.getConnection(DB_URL, USER, PASS);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
 
-        PilotsReader reader = new PilotsReader ("sourse_data\\pilots.csv");
+        PilotsFileReader reader = new PilotsFileReader(PILOTS_SOURCE_FILE);
+        List<Pilots> pilots =  reader.readItens();
 
-        for (Pilots pilots : reader.readItens()){
+        PilotsDbWriter writer = new PilotsDbWriter(pilots);
+        writer.saveAll();
+
+        for (Pilots pilots: (new PilotsDbReader()).readAll()){
             System.out.println(pilots);
+
+
+
+
+
         }
 
 

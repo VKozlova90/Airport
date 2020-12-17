@@ -18,18 +18,9 @@ public class Main {
         pilots.add (new Pilots(-1, "A5", "B5", Rank.SENIOR_PILOT, "AB5"));
 
         System.out.println(pilots);
+        PilotsOUtil.writePilots(List<Pilots> pilots, "pilots.csv");
+        PilotsOUtil.readPilots("pilots.csv");
 
-        try (FileWriter writer =new FileWriter("pilots.csv")){
-
-           for (Pilots pilots : pilots){
-               String s =PilotsOUtil.FormatPilotsForWriting(pilots);
-               writer.write(s);
-
-           }
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
 
         List<Aircraft> aircraft= new ArrayList<>();
         aircraft.add(new Aircraft(-1, "BR1", "MOD1", 89, 1212));
@@ -39,16 +30,9 @@ public class Main {
         aircraft.add(new Aircraft(-1, "BR5", "MOD5", 159, 1616));
 
         System.out.println(aircraft);
-        try (FileWriter writer =new FileWriter("aircraft.csv")){
+        AircraftOUtil.writeAircraft(List<Aircraft> aircraft, "aircraft.csv");
+        AircraftOUtil.readAircraft("aircraft.csv");
 
-            for (Aircraft aircraft : aircraft){
-                String a =AircraftOUtil.FormatAircraftForWriting(aircraft);
-                writer.write(a);
-            }
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
 
         List<Flights> flights= new ArrayList<>();
         flights.add (new Flights(-1, 2, 5, "1.1.2020", "1:00", 1719));
@@ -58,16 +42,8 @@ public class Main {
         flights.add (new Flights(-1, 2, 5, "5.5.2020", "5:50", 1719));
 
         System.out.println(flights);
-        try (FileWriter writer =new FileWriter("flights.csv")){
-
-            for (Flights flights : flights){
-                String f =FlightsOUtil.FormatFlightsForWriting(flights);
-                writer.write(f);
-            }
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        FlightsOUtil.writeFlights(List<Flights> flights, "flights.csv");
+        FlightsOUtil.readFlights("flights.csv");
 
 
 

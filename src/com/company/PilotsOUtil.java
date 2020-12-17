@@ -25,7 +25,7 @@ public class PilotsOUtil {
     public static Pilots FormatObject (String s){
 
         String[] fields = s.split(";");
-        int id = fields[0];
+        int id = Integer.parseInt(fields[0]);
         String name = fields[1];
         String last_name = fields[2];
         String rank = fields[3];

@@ -25,12 +25,12 @@ public class FlightsOUtil {
     public static Flights FormatObject (String f){
 
         String[] fields = f.split(";");
-        int id = fields[0];
-        int aircrat = fields[1];
-        int pilot = fields[2];
+        int id = Integer.parseInt(fields[0]);
+        int aircrat = Integer.parseInt(fields[1]);
+        int pilot = Integer.parseInt(fields[2]);
         String data = fields[3];
         String time = fields[4];
-        int flight_number = fields[5];
+        int flight_number = Integer.parseInt(fields[5]);
 
         return new Flights (id,aircrat, pilot, data, time, flight_number);
 

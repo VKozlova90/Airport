@@ -25,11 +25,11 @@ public class AircraftOUtil {
     public static Aircraft FormatObject (String a){
 
         String[] fields = a.split(";");
-        int id = fields[0];
+        int id = Integer.parseInt(fields[0]);
         String brand = fields[1];
         String model = fields[2];
-        int passenger_capacity = fields[3];
-        int tail_number = fields[4];
+        int passenger_capacity = Integer.parseInt(fields[3]);
+        int tail_number = Integer.parseInt(fields[4]);
 
         return new Aircraft (id,brand, model, passenger_capacity, tail_number);
 

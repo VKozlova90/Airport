@@ -2,12 +2,8 @@ package com.company.util;
 
 import com.company.entity.Pilots;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class PilotsUtil {
 
@@ -24,62 +20,14 @@ public class PilotsUtil {
 
     }
 
-//    private List<Pilots> pilots;
-//    private String filepath;
-//
-//    public PilotsUtil(List<Pilots> pilots, String filepath) {
-//        this.pilots = pilots;
-//        this.filepath = filepath;
-//    }
-//
-//    public static String FormatPilotsForWriting (Pilots pilots) {
-//        return pilots.getId() + ";" + pilots.getName()+ ";" + pilots.getLast_name()+ ";" + pilots.getRank()+ ";"
-//                + pilots.getPilot_code()+ "\n";
-//    }
-//
-//    public static Pilots FormatObject (String s){
-//
-//        String[] fields = s.split(";");
-//        int id = Integer.parseInt(fields[0]);
-//        String name = fields[1];
-//        String last_name = fields[2];
-//        String rank = fields[3];
-//        String pilot_code = fields[4];
-//
-//        return new Pilots (id,name, last_name, rank, pilot_code);
-//
-//    }
-//
-//    public static void writePilots(List<Pilots> pilots, String filepath) {
-//        try (FileWriter writer = new FileWriter(filepath)) {
-//
-//            for (Pilots pilots : pilots) {
-//                String s = PilotsUtil.FormatPilotsForWriting(pilots);
-//                writer.write(s);
-//            }
-//        } catch (IOException e) {
-//            System.out.println("Запись в файл не удалась");
-//        }
-//    }
-//
-//    public PilotsUtil(String filepath) {
-//        this.filepath = filepath;
-//    }
-//
-//    public static void  readPilots(String filepath) {
-//        List<Pilots> result = new ArrayList<>();
-//
-//        try (BufferedReader reader = new BufferedReader(new FileReader(filepath))) {
-//            String s;
-//            while ((s = reader.readLine()) != null) {
-//                Pilots pilots = PilotsUtil.FormatObject(s);
-//                System.out.println(pilots);
-//
-//                result.add(pilots);
-//            }
-//        } catch (IOException e) {
-//            System.out.println("Чтение не удалось");
-//        }
-//    }
+    public static Pilots toObject (ResultSet resultSet) throws SQLException {
+        int id = resultSet.getInt("id");
+        String name = resultSet.getString("name");
+        String last_name = resultSet.getString("last_name");
+        String rank = resultSet.getString("rank");
+        String pilot_code = resultSet.getString("pilot_code");
 
+        return new Pilots(id, name, last_name, rank, pilot_code);
+
+    }
 }

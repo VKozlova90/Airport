@@ -2,6 +2,7 @@ package com.company.io;
 
 import com.company.entity.Pilots;
 import com.company.util.DbConnectionUtil;
+import com.company.util.PilotsUtil;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -20,15 +21,9 @@ public class PilotsDbReader {
         try (PreparedStatement statement = connection .prepareStatement(SELECT_ALL)) {
 
             ResultSet result = statement.executeQuery();
+
             while (result.next()) {
-
-                int id = result.getInt("id");
-                String name = result.getString("name");
-                String last_name = result.getString("last_name");
-                String rank = result.getString("rank");
-                String pilot_code = result.getString("pilot_code");
-
-                Pilots pilots = new Pilots(id, name, last_name, rank, pilot_code);
+                Pilots pilots = PilotsUtil.toObject(result);
 
                 res.add(pilots);
             }

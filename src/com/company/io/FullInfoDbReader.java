@@ -33,7 +33,7 @@ public class FullInfoDbReader {
                 String rank = result.getString("rank");
 
                 System.out.println(id + "-" + flight_number + "-" + data+ "-" +time+ "-" +tail_number+ "-" +brand
-                        + "-" + model+ "-" + passenger_capacity+ "-" +name+ "-" +last_name+ "-" +pilot_code
+                        + " " + model+ "-" + passenger_capacity+ "-" +last_name + " " + name  + "-" +pilot_code
                         + "-" + rank);
             }
 

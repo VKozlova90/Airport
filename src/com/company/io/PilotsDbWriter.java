@@ -17,7 +17,7 @@ public class PilotsDbWriter {
     }
 
     public void saveAll(){
-        for (Pilots pilots :pilots){
+        for (Pilots pilots : pilots){
             save(pilots);
         }
     }

@@ -43,6 +43,10 @@ public class Main {
         FullInfoDbReader fullInfoDbReader= new FullInfoDbReader ();
         fullInfoDbReader.readAll();
 
+        FullInfoDbReader fullInfoDbReader= new FullInfoDbReader ();
+        fullInfoDbReader.writeResult();
+
+
         }
 
  }

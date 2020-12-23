@@ -40,7 +40,7 @@ public class FullInfoDbReader {
 
                 System.out.println(id + "-" + flight_number + "-" + data + "-" + time + "-" + tail_number + "-" + brand
                         + " " + model + "-" + passenger_capacity + "-" + last_name + " " + name + "-" + pilot_code
-                        + "-" + rank);
+                        + " (" + rank + ")");
             }
 
         } catch (SQLException e) {

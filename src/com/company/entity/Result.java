@@ -47,5 +47,5 @@ public class Result {
                 ", rank='" + rank + '\'' +
                 '}';
     }
-    Sdgffhf
+
 }

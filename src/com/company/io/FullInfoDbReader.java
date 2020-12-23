@@ -4,6 +4,7 @@ import com.company.entity.Result;
 import com.company.util.DbConnectionUtil;
 import com.company.util.ResultUtil;
 
+
 import java.io.FileWriter;
 import java.io.IOException;
 import java.sql.Connection;
@@ -14,6 +15,7 @@ import java.sql.SQLException;
 public class FullInfoDbReader {
 
     private static final String SELECT_ALL = "SELECT f.id, f.flight_number, f.data, f.time FROM flights AS f INNER JOIN aircraft a ON a.id=f.aircraft INNER JOIN pilots p ON p.id=f.pilot";
+    private Result[] result;
 
     public void readAll() {
         Connection connection = DbConnectionUtil.detConnection();
@@ -46,18 +48,20 @@ public class FullInfoDbReader {
         }
     }
 
-        public void writeResult(){
+    public void writeResult() {
         Connection connection = DbConnectionUtil.detConnection();
 
-        try (FileWriter writer= new FileWriter("result\\result.csv")){
+        try (FileWriter writer = new FileWriter("result\\result.csv")) {
 
-            for (Result result : result){
+            for (Result result : result) {
                 String line = ResultUtil.Object(result);
                 writer.write(line);
             }
-       } catch (IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
 
+    }
 }
+
 

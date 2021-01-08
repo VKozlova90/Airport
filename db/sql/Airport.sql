@@ -1,7 +1,5 @@
-CREATE DATABASE IF NOT EXISTS Airport;
-DROP TABLE IF EXISTS flights;
-DROP TABLE IF EXISTS pilots;
-DROP TABLE IF EXISTS aircraft;
+DROP DATABASE Airport;
+CREATE DATABASE Airport;
 
 CREATE TABLE pilots(
 id INT AUTO_INCREMENT,
@@ -21,6 +19,7 @@ tail_number INT UNIQUE NOT NULL,
 PRIMARY KEY (id)
 );
 
+
 CREATE TABLE flights(
 id INT AUTO_INCREMENT,
 aircrat INT NOT NULL,
@@ -32,3 +31,4 @@ PRIMARY KEY (id),
 FOREIGN KEY (aircrat) REFERENCES aircraft (id),
 FOREIGN KEY (pilot) REFERENCES pilots (id)
 );
+

@@ -51,9 +51,6 @@ public class FullInfoDbReader {
         }
     }
 
-
-
-
     public void writeResult() {
         try (FileWriter writer = new FileWriter("result\\result.csv")) {
 

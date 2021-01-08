@@ -8,7 +8,7 @@ public class DbConnectionUtil {
     private static Connection connection;
     private static final String DB_URL = "jdbc:mysql://localhost:3306/airport?useUnicode=true&useSSL=false&serverTimezone=UTC";
     private static final String USER = "root";
-    private static final String PASS = "1ivjwBvp%";
+    private static final String PASS = "Core2duo166";
 
     public static Connection detConnection() {
 

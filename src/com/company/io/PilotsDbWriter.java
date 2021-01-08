@@ -9,33 +9,32 @@ import java.sql.SQLException;
 import java.util.List;
 
 public class PilotsDbWriter {
-    private List <Pilots> pilots;
-    private static final String ADD = "INSERT INTO pilots (id, name, last_name, rank, pilot_code) VALUES (?, ?, ?, ?,?)";
+    private List<Pilots> pilots;
+    private static final String ADD = "INSERT INTO pilots (name, last_name, p_rank, pilot_code) VALUES (?, ?, ?, ?)";
 
     public PilotsDbWriter(List<Pilots> pilots) {
         this.pilots = pilots;
     }
 
-    public void saveAll(){
-        for (Pilots pilots : pilots){
+    public void saveAll() {
+        for (Pilots pilots : pilots) {
+            System.out.println(pilots);
             save(pilots);
         }
     }
 
-    private void save(Pilots pilots){
+    private void save(Pilots pilots) {
         Connection connection = DbConnectionUtil.detConnection();
+        try (PreparedStatement statement = connection.prepareStatement(ADD)) {
 
-        try (PreparedStatement statement = connection.prepareStatement(ADD)){
-            statement.setInt(1, pilots.getId());
-            statement.setString(2, pilots.getName());
-            statement.setString(3, pilots.getLast_name());
-            statement.setString(4, pilots.getRank());
-            statement.setString(5, pilots.getPilot_code());
+            statement.setString(1, pilots.getName());
+            statement.setString(2, pilots.getLast_name());
+            statement.setString(3, pilots.getP_rank().toString());
+            statement.setString(4, pilots.getPilot_code());
 
             statement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
     }
 }

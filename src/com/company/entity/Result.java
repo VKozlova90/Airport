@@ -2,7 +2,6 @@ package com.company.entity;
 
 public class Result {
 
-    private int id;
     private String flight_number;
     private String data;
     private String time;
@@ -13,10 +12,9 @@ public class Result {
     private String name;
     private String last_name;
     private String pilot_code;
-    private String rank;
+    private Rank rank;
 
-    public Result(int id, String flight_number, String data, String time, int tail_number, String brand, String model, int passenger_capacity, String name, String last_name, String pilot_code, String rank) {
-        this.id = id;
+    public Result(String flight_number, String data, String time, int tail_number, String brand, String model, int passenger_capacity, String name, String last_name, String pilot_code, Rank rank) {
         this.flight_number = flight_number;
         this.data = data;
         this.time = time;
@@ -30,10 +28,53 @@ public class Result {
         this.rank = rank;
     }
 
+    public String getFlight_number() {
+        return flight_number;
+    }
+
+    public String getData() {
+        return data;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public int getTail_number() {
+        return tail_number;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public int getPassenger_capacity() {
+        return passenger_capacity;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getLast_name() {
+        return last_name;
+    }
+
+    public String getPilot_code() {
+        return pilot_code;
+    }
+
+    public Rank getRank() {
+        return rank;
+    }
+
     @Override
     public String toString() {
         return "Result{" +
-                "id=" + id +
                 ", flight_number='" + flight_number + '\'' +
                 ", data='" + data + '\'' +
                 ", time='" + time + '\'' +
@@ -47,5 +88,4 @@ public class Result {
                 ", rank='" + rank + '\'' +
                 '}';
     }
-
 }

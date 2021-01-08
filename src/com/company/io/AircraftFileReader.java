@@ -11,18 +11,17 @@ import java.util.List;
 
 public class AircraftFileReader {
 
-    private  final  String filepath;
+    private final String filepath;
 
     public AircraftFileReader(String filepath) {
         this.filepath = filepath;
     }
 
-    public List<Aircraft> readItens() {
-        List <Aircraft> result = new ArrayList<>();
-        try (BufferedReader reader1= new BufferedReader(new FileReader(filepath))){
-            String line = null;
-
-            while ((line = reader1.readLine()) != null){
+    public List<Aircraft> readItems() {
+        List<Aircraft> result = new ArrayList<>();
+        try (BufferedReader reader1 = new BufferedReader(new FileReader(filepath))) {
+            String line;
+            while ((line = reader1.readLine()) != null) {
                 Aircraft aircraft = AircraftUtil.toObject(line);
 
                 result.add(aircraft);
@@ -31,8 +30,6 @@ public class AircraftFileReader {
             System.out.println("Ошибка при чтении");
         }
 
-        return new ArrayList<>();
-
+        return result;
     }
-
 }

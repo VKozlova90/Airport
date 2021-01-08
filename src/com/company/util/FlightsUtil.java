@@ -1,13 +1,14 @@
 package com.company.util;
 
 import com.company.entity.Flights;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class FlightsUtil {
 
-    public static Flights toObject (String line){
-        String [] flightsArgs = line.split(";");
+    public static Flights toObject(String line) {
+        String[] flightsArgs = line.split("; ");
 
         int id = Integer.parseInt(flightsArgs[0]);
         int aircrat = Integer.parseInt(flightsArgs[1]);
@@ -16,11 +17,11 @@ public class FlightsUtil {
         String time = flightsArgs[4];
         int flight_number = Integer.parseInt(flightsArgs[5]);
 
-        return new Flights (id,aircrat, pilot, data, time, flight_number);
+        return new Flights(id, aircrat, pilot, data, time, flight_number);
 
     }
 
-    public static Flights toObject (ResultSet resultSet) throws SQLException {
+    public static Flights toObject(ResultSet resultSet) throws SQLException {
 
         int id = resultSet.getInt("id");
         int aircrat = resultSet.getInt("aircrat");

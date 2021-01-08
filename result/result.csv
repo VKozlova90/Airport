@@ -1,5 +1,5 @@
-1; A1719; 2.2.2020; 2:20; 1212; АТР Model1; 89; Billov B.; AB1 (PILOT)
-2; B4785; 1.1.2020; 1:00; 1313; Airbus Model2; 125; Timov T.; AB2 (TRAINEE)
-3; C9871; 4.5.2020; 4:40; 1414; Bell-Agusta Model3; 8; Jonov J.; AB3 (INSTRUCTOR_PILOT)
-4; D1068; 3.3.2020; 3:30; 1515; Boeing Model4; 277; Stivov S.; AB4 (SECOND_PILOT)
-5; E9510; 5.5.2020; 5:50; 1616; British Aircraft Model5; 159; AB5 (SENIOR_PILOT)
+1719, 2002-02-20, 02:20:00, 1313, Airbus, Model2, 125, J., Jonov, AB3, INSTRUCTOR_PILOT
+4785, 2001-01-20, 01:00:00, 1212, АТР, Model1, 89, T., Timov, AB2, TRAINEE
+9871, 2004-05-20, 04:40:00, 1616, British Aircraft, Model5, 159, B., Billov, AB1, PILOT
+1068, 2003-03-20, 03:30:00, 1515, Boeing, Model4, 277, K., Kenov, AB5, SENIOR_PILOT
+9510, 2005-05-20, 05:50:00, 1414, Bell-Agusta, Model3, 8, S., Stivov, AB4, SECOND_PILOT

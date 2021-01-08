@@ -1,8 +1,5 @@
 package com.company.entity;
 
-import java.sql.Time;
-import java.sql.Date;
-
 public class Flights {
 
     private int id;

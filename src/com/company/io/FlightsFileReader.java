@@ -17,7 +17,7 @@ public class FlightsFileReader {
         this.filepath = filepath;
     }
 
-    public List<Flights> readItens() {
+    public List<Flights> readItems() {
         List <Flights> result = new ArrayList<>();
         try (BufferedReader reader2= new BufferedReader(new FileReader(filepath))){
             String line = null;
@@ -31,7 +31,7 @@ public class FlightsFileReader {
             System.out.println("Ошибка при чтении");
         }
 
-        return new ArrayList<>();
+        return result;
 
     }
 }

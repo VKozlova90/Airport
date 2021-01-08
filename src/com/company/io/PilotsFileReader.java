@@ -16,21 +16,18 @@ public class PilotsFileReader {
         this.filepath = filepath;
     }
 
-    public List<Pilots> readItens() {
+    public List<Pilots> readItems() {
         List <Pilots> result = new ArrayList<>();
         try (BufferedReader reader= new BufferedReader(new FileReader(filepath))){
-            String line = null;
+            String line;
 
             while ((line = reader.readLine()) != null){
             Pilots pilots = PilotsUtil.toObject(line);
-
            result.add(pilots);
             }
         } catch (IOException e) {
             System.out.println("Ошибка при чтении");
         }
-
-        return new ArrayList<>();
-
+        return result;
     }
 }
